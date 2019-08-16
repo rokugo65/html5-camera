@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<body>
+<div id="app">
+    <div id="container" style="margin: auto;">
+        <video id="video" autoplay v-bind:width=cameraWidth v-bind:height=cameraHeight hidden></video>
+        <canvas id="canvas" v-bind:width=cameraWidth v-bind:height=cameraHeight></canvas>
+        <div class="button" @click="takePicture()">写真をとる</div>
+        <div class="button" v-if="videoSroucesArray.length >= 2" @click="changeCamera()">カメラチェンジ</div>
+    </div>
+</div>
+
+</body>
+<script src="./vue.js"></script>
+<script src="./app.js"></script>
+</html>
